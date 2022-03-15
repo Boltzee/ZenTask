@@ -1,5 +1,4 @@
 import React from "react";
-import db from "./firebase";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./components/Navbar/NavBar";
 import Homepage from "./components/Homepage/Homepage";
