@@ -1,0 +1,21 @@
+.no_user_cont {
+    min-height: 65vh;
+    margin-top: 19vh;
+}
+
+.no_user_row {
+    margin-left: 4rem !important;
+}
+
+@media (max-width: 1071px) {
+    .no_user_row {
+        margin-left: 1rem !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .no_user_row {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
