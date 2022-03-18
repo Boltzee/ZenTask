@@ -1,37 +1,16 @@
 import React from "react";
-import Style from "./Navbar.module.css";
 import "./Navbar.css";
 import { Navbar, Nav } from "react-bootstrap";
-import brand from "./Brand_icon.svg";
 
-function NavBar() {
+function NavBar({ darkMode }) {
     return (
-        <Navbar
-            id="main_navbar"
-            sticky="top"
-            className={`${Style.main_navbar}`}
-        >
-            <Navbar.Brand href="/">
-                <img src={brand} className="_logo" />
-            </Navbar.Brand>
-            <Nav
-                className="n"
-                style={{
-                    alignItems: `center`,
-                    width: `100%`,
-                    paddingRight: `4.5rem`,
-                }}
-                id="nav-cont"
+        <Navbar id="main_navbar" fixed="top">
+            <Navbar.Brand
+                href="/"
+                className={`brand ${darkMode ? "text-white" : "text-dark"}`}
             >
-                <Nav.Link href="#" className={`${Style.n2}`} id="left">
-                    Login
-                </Nav.Link>
-
-                <Nav.Link href="#" className={`${Style.n2}`} id="right">
-                    <i>Register</i>
-                </Nav.Link>
-            </Nav>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                Notes Pro
+            </Navbar.Brand>
         </Navbar>
     );
 }

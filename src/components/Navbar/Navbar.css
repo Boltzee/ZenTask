@@ -3,100 +3,29 @@
     text-align: center;
 }
 
-.navbar2 {
-    backdrop-filter: blur(4px);
-    padding-top: 0;
-    padding-bottom: 0;
-    transition: box-shadow 0.1s linear;
-    box-shadow: 0 1rem 7rem rgba(0, 0, 0, 0.15) !important;
-    background-color: rgba(255, 255, 255, 0.88);
-}
-
-.navbar2:hover {
-    box-shadow: 0 1rem 7rem rgba(0, 0, 0, 0.35) !important;
-}
-
 .n {
     display: flex;
     justify-content: flex-end;
 }
-.n2 {
-    color: #1f2532 !important;
-    /*font-family: "PT Sans", sans-serif;*/
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
-    border: 2px solid transparent;
-    transition: border 0.5s linear;
-    transition: color 0.4s linear;
-    /*font-family: "Noto Sans TC", sans-serif;*/
-    font-family: "Roboto", sans-serif;
-    font-size: 17px;
-}
-.n2:hover {
-    border-bottom: 2px solid black;
-    border-top: 2px solid black;
-    color: gray !important;
-}
-.n2:active,
-.n2:focus {
-    color: coral !important;
-}
-._logo {
+
+.brand.navbar-brand {
     margin: 0px;
     filter: none;
-    transform: scale(0.8);
     position: relative;
+    padding-top: 2rem;
     left: 4.5rem;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.8rem !important;
+    transition: all 0.5s ease-out;
     /* background: url("./Brand_icon.svg") no-repeat;
     background-position: center; */
 }
 
-@media (min-width: 992px) {
-    .n {
-        position: absolute;
-        right: 0;
+@media (max-width: 767px) {
+    #main_navbar {
+        justify-content: center !important;
     }
-}
-
-@media (max-width: 662px) {
-    ._logo {
-        left: 0.5rem;
-    }
-    .n {
-        padding-right: 0.5rem !important;
-    }
-}
-
-#right,
-#left {
-    margin-right: 1.5rem;
-    font-size: small;
-}
-
-#left {
-    font-weight: bold;
-}
-
-#right {
-    background: #01cb63 0% 0% no-repeat padding-box;
-    box-shadow: 0px 5px 15px #01cb6359;
-    border-radius: 10px;
-    color: white;
-    width: 120px;
-    vertical-align: middle;
-    text-align: center;
-}
-
-@media (max-width: 464px) {
-    ._logo {
-        width: 103px;
-    }
-    #left,
-    #right {
-        margin-right: 0.5rem;
-        font-size: x-small;
-    }
-    #right {
-        width: 76px;
+    .brand {
+        left: 0;
     }
 }
