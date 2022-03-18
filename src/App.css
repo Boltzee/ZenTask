@@ -1,3 +1,37 @@
 body {
     font-family: "Noto Sans", sans-serif !important;
 }
+
+.darkMode_toggler {
+    position: fixed;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    padding: 0.8rem;
+    border-radius: 100%;
+    background-color: #202124;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 9876;
+}
+
+.darkMode_image {
+    width: 30px;
+    height: 30px;
+}
+
+.toast-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: fit-content;
+    z-index: 732;
+    padding-left: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+/* .toast {
+    display: block !important;
+} */
