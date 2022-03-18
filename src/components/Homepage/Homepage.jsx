@@ -166,6 +166,117 @@ function Homepage({ darkMode, toggleDarkMode, addToast }) {
 
     const onLeave = (origin, destination, direction) => {
         const section = destination.item;
+        const section_2_s = document.querySelector(".section_2_s");
+        const notes_img_col = document.querySelector(".notes_img_col");
+        const notes_col = document.querySelector(".notes_col");
+        const note_title = document.querySelectorAll(".note_title");
+        const note_tag = document.querySelectorAll(".note_tag");
+        const note_desc = document.querySelectorAll(".note_desc");
+        const tl = gsap.timeline();
+        if (destination.index == 1) {
+            tl.fromTo(
+                section_2_s,
+                { x: "-40vw", opacity: 0.4 },
+                { x: "0vw", opacity: 1, duration: 1 }
+            )
+                .fromTo(
+                    notes_img_col,
+                    { x: "-50vw", opacity: 0 },
+                    { x: "0vw", opacity: 1, duration: 0.8 },
+                    "-=0.8"
+                )
+                .fromTo(
+                    notes_col,
+                    { y: "70vh", opacity: 0 },
+                    { y: "0vh", opacity: 1, duration: 0.8 },
+                    "-=0.4"
+                )
+                .fromTo(
+                    note_title,
+                    { x: "-5vw", opacity: 0 },
+                    { x: "0vw", opacity: 1, duration: 0.73 },
+                    "-=0.55"
+                )
+                .fromTo(
+                    note_tag,
+                    { x: "-5vw", opacity: 0 },
+                    { x: "0vw", opacity: 1, duration: 0.73 },
+                    "-=0.55"
+                )
+                .fromTo(
+                    note_desc,
+                    { x: "-5vw", opacity: 0 },
+                    { x: "0vw", opacity: 1, duration: 0.73 },
+                    "-=0.55"
+                );
+        } else {
+            const section_1_s = document.querySelector(".section_1_s");
+            const header_col = document.querySelector(".header_col_s");
+            const img_col = document.querySelector(".image_col_s");
+            const headings_s = document.querySelector(".headings_s");
+            const tag_s = document.querySelector(".tag_s");
+            const get_started_s = document.querySelector(".get_started_s");
+            const line_s = document.querySelector(".line_s");
+            const quote_s = document.querySelector(".quote_s");
+            const person_info_s = document.querySelector(".person_info_s");
+            const down_slider = document.querySelector(
+                ".scroll-down-arrow.smooth-scroll-down"
+            );
+            const tl = gsap.timeline();
+            tl.fromTo(
+                section_1_s,
+                { y: "150vh", opacity: 0.4 },
+                { y: "0vh", opacity: 1, duration: 0.8 }
+            )
+                .fromTo(
+                    img_col,
+                    { x: "50vw", opacity: 0 },
+                    { x: "0vw", opacity: 1, duration: 0.9 },
+                    "-=0.4"
+                )
+                .fromTo(
+                    headings_s,
+                    { x: "-10vw", opacity: 0 },
+                    { x: "0vw", opacity: 1, duration: 0.73 },
+                    "-=0.66"
+                )
+                .fromTo(
+                    tag_s,
+                    { x: "-10vw", opacity: 0 },
+                    { x: "0vw", opacity: 1, duration: 0.73 },
+                    "-=0.66"
+                )
+                .fromTo(
+                    get_started_s,
+                    { x: "-10vw", opacity: 0 },
+                    { x: "0vw", opacity: 1, duration: 0.73 },
+                    "-=0.66"
+                )
+                .fromTo(
+                    line_s,
+                    { x: "-10vw", opacity: 0 },
+                    { x: "0vw", opacity: 1, duration: 0.73 },
+                    "-=0.66"
+                )
+                .fromTo(
+                    quote_s,
+                    { x: "-10vw", opacity: 0 },
+                    { x: "0vw", opacity: 1, duration: 0.73 },
+                    "-=0.66"
+                )
+                .fromTo(
+                    person_info_s,
+                    { x: "-10vw", opacity: 0 },
+                    { x: "0vw", opacity: 1, duration: 0.73 },
+                    "-=0.66"
+                )
+                .fromTo(
+                    down_slider,
+                    { x: "-10vw", opacity: 0 },
+                    { x: "0vw", opacity: 1, duration: 0.73 },
+                    "-=0.66"
+                );
+        }
 
         if (destination.index == 0) {
             document.querySelector(".brand").style.paddingTop = "2rem";
@@ -209,6 +320,12 @@ function Homepage({ darkMode, toggleDarkMode, addToast }) {
         const section_1_s = document.querySelector(".section_1_s");
         const header_col = document.querySelector(".header_col_s");
         const img_col = document.querySelector(".image_col_s");
+        const headings_s = document.querySelector(".headings_s");
+        const tag_s = document.querySelector(".tag_s");
+        const get_started_s = document.querySelector(".get_started_s");
+        const line_s = document.querySelector(".line_s");
+        const quote_s = document.querySelector(".quote_s");
+        const person_info_s = document.querySelector(".person_info_s");
         const tl = gsap.timeline({ delay: 3.5 });
         tl.fromTo(
             section_1_s,
@@ -222,10 +339,40 @@ function Homepage({ darkMode, toggleDarkMode, addToast }) {
                 "-=0.4"
             )
             .fromTo(
-                header_col,
-                { x: "-20vw", opacity: 0 },
-                { x: "0vw", opacity: 1, duration: 1.2 },
-                "-=0.8"
+                headings_s,
+                { x: "-10vw", opacity: 0 },
+                { x: "0vw", opacity: 1, duration: 0.73 },
+                "-=0.66"
+            )
+            .fromTo(
+                tag_s,
+                { x: "-10vw", opacity: 0 },
+                { x: "0vw", opacity: 1, duration: 0.73 },
+                "-=0.66"
+            )
+            .fromTo(
+                get_started_s,
+                { x: "-10vw", opacity: 0 },
+                { x: "0vw", opacity: 1, duration: 0.73 },
+                "-=0.66"
+            )
+            .fromTo(
+                line_s,
+                { x: "-10vw", opacity: 0 },
+                { x: "0vw", opacity: 1, duration: 0.73 },
+                "-=0.66"
+            )
+            .fromTo(
+                quote_s,
+                { x: "-10vw", opacity: 0 },
+                { x: "0vw", opacity: 1, duration: 0.73 },
+                "-=0.66"
+            )
+            .fromTo(
+                person_info_s,
+                { x: "-10vw", opacity: 0 },
+                { x: "0vw", opacity: 1, duration: 0.73 },
+                "-=0.66"
             );
     }, []);
 
@@ -303,7 +450,7 @@ function Homepage({ darkMode, toggleDarkMode, addToast }) {
                                                 className={`col-lg-5 col-md-6 header_col_s ${Style.header_col}`}
                                             >
                                                 <div
-                                                    className={`${
+                                                    className={`headings_s ${
                                                         darkMode
                                                             ? "text-white"
                                                             : "text-dark"
@@ -326,7 +473,7 @@ function Homepage({ darkMode, toggleDarkMode, addToast }) {
                                                     </h1>
                                                 </div>
                                                 <div
-                                                    className={`${
+                                                    className={`tag_s ${
                                                         darkMode
                                                             ? Style.off_white
                                                             : "text-dark"
@@ -340,7 +487,7 @@ function Homepage({ darkMode, toggleDarkMode, addToast }) {
                                                 </div>
                                                 <a
                                                     href="#"
-                                                    className={`btn btn-rounded ${
+                                                    className={`btn btn-rounded get_started_s ${
                                                         darkMode
                                                             ? "btn-light"
                                                             : "btn-dark"
@@ -360,6 +507,7 @@ function Homepage({ darkMode, toggleDarkMode, addToast }) {
                                                     Get Started
                                                 </a>
                                                 <div
+                                                    className="line_s"
                                                     style={{
                                                         width: "10%",
                                                         border: "1px solid",
@@ -370,7 +518,7 @@ function Homepage({ darkMode, toggleDarkMode, addToast }) {
                                                     }}
                                                 ></div>
                                                 <div
-                                                    className={`mt-4 ${Style.quotation}`}
+                                                    className={`mt-4 quote_s ${Style.quotation}`}
                                                     style={{
                                                         fontSize: "0.9rem",
                                                         color: darkMode
@@ -386,7 +534,7 @@ function Homepage({ darkMode, toggleDarkMode, addToast }) {
                                                     </q>
                                                 </div>
                                                 <div
-                                                    className={`mt-3 ${Style.person_info}`}
+                                                    className={`mt-3 person_info_s ${Style.person_info}`}
                                                 >
                                                     <img
                                                         src={Picture1}
@@ -481,10 +629,10 @@ function Homepage({ darkMode, toggleDarkMode, addToast }) {
                                     <Container fluid={true}>
                                         <Row>
                                             <div
-                                                className={`col-md-4 ${Style.img2_col}`}
+                                                className={`col-md-4 notes_img_col ${Style.img2_col}`}
                                             ></div>
                                             <div
-                                                className={`col-md-8 ${Style.notes_col}`}
+                                                className={`col-md-8 notes_col ${Style.notes_col}`}
                                             >
                                                 {slider_ar.map((arr, index) => (
                                                     <div
@@ -566,7 +714,7 @@ function Homepage({ darkMode, toggleDarkMode, addToast }) {
                                                                                         }
                                                                                     ></div>
                                                                                     <h5
-                                                                                        className={`${
+                                                                                        className={`note_title ${
                                                                                             darkMode
                                                                                                 ? "text-white"
                                                                                                 : "text-dark"
@@ -580,6 +728,7 @@ function Homepage({ darkMode, toggleDarkMode, addToast }) {
                                                                                         }
                                                                                     </h5>
                                                                                     <p
+                                                                                        className="note_tag"
                                                                                         style={{
                                                                                             fontSize:
                                                                                                 "0.9rem",
@@ -598,6 +747,7 @@ function Homepage({ darkMode, toggleDarkMode, addToast }) {
                                                                                         }
                                                                                     </p>
                                                                                     <p
+                                                                                        className="note_desc"
                                                                                         style={{
                                                                                             fontSize:
                                                                                                 "0.75rem",
